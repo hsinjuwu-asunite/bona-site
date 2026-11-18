@@ -1,14 +1,14 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "bonatek-site",
+  "name": "bona-site",
   "compatibility_date": "2025-09-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "bonatek-site" }],
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "bona-site" }],
   "observability": { "enabled": true },
   "vars": {
     // 聯絡表單收件信箱，多個用逗號分隔，例如 "sales@bonatek.com.tw,boss@bonatek.com.tw"

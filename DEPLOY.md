@@ -27,7 +27,7 @@
    - **Build command**：`npx opennextjs-cloudflare build`
    - **Deploy command**：`npx opennextjs-cloudflare deploy`
    - **Production branch**：`main`
-4. 按 **Deploy**，大約 3 到 5 分鐘後，會拿到一個 `https://bonatek-site.<你的帳號>.workers.dev` 測試網址。
+4. 按 **Deploy**，大約 3 到 5 分鐘後，會拿到一個 `https://bona-site.<你的帳號>.workers.dev` 測試網址。
 
 之後只要 `git push` 到 main，Cloudflare 就會自動重新建置並上線。推到其他分支的話，會產生一個預覽網址，方便先確認改得對不對。
 
