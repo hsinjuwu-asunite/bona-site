@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import type { NavItem } from '@/lib/data';
+import QuoteBadge from '@/components/QuoteBadge';
 
 const BREAKPOINT = 1001; // same as the original data-breakpoint
 
@@ -94,6 +95,7 @@ export default function Header({ nav, address, phone, hours }: { nav: NavItem[];
             <li><span className="glyphicon glyphicon-earphone" /> {phone}</li>
           </ul>
           <div className="header-top-right">
+            <QuoteBadge />
             <ul className="header-language">
               <li><a href="#">Eng</a></li>
               <li><a href="#" className="active">繁中</a></li>
@@ -106,6 +108,7 @@ export default function Header({ nav, address, phone, hours }: { nav: NavItem[];
         <div className="logo">
           <h1><Link href="/">寶楠科技股份有限公司</Link></h1>
         </div>
+        <QuoteBadge className="quote-badge--mobile" />
         <div className="header-nav clearfix">
           <div
             className={'menu-button c-hamburger c-hamburger--htx' + (mobileOpen ? ' active' : '')}

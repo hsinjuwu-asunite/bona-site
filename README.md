@@ -55,3 +55,11 @@ public/css/site.css  新站另外加的樣式
 - 可以選的做法：
   1. 自建：Next.js 搭配資料庫（例如 Postgres 或 Supabase），金流用綠界、藍新或 Stripe。
   2. Headless Shopify：商品和結帳交給 Shopify，前台用這個專案。
+
+## 產品型錄（/products/parts）
+
+- 商品資料在 `data/catalog.json`，來源是 Claude Sheet「寶楠 產品型錄」中的「產品型錄」分頁，由 `scripts/build_catalog.py` 轉出。
+- **只會匯出可以公開的欄位**：進價、毛利率、進貨渠道、主要客戶、價格備註都不會進到網站或 repo。
+- 售價只顯示**近 3 年內**的成交價，超過 3 年的顯示「請詢價」，年限可以在 `PRICE_MAX_AGE_DAYS` 調整。
+- 商品照片目前是比對舊官網已有的照片，比對不到的顯示品牌和分類的佔位圖。要補照片，把圖片放進 `public/` 底下，再在 `catalog.json` 的 `image` 欄位填上路徑。
+- 詢價單存在瀏覽器裡（localStorage）。送出後由 `/api/inquiry` 寄信給公司，信件內容包含每個品項的型號、數量、參考價和交期。

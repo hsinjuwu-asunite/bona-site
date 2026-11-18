@@ -2,7 +2,6 @@ import siteJson from '@/data/site.json';
 import pagesJson from '@/data/pages.json';
 import articlesJson from '@/data/articles.json';
 import brandsJson from '@/data/brands.json';
-import productsJson from '@/data/products.json';
 
 export type Article = {
   id: number | string;
@@ -25,30 +24,10 @@ export type Brand = {
   file: string | null;
 };
 
-/**
- * A part BONA has sold before. This is the record that will later become an
- * e-commerce product (add price / stock / variants when the shop is built).
- */
-export type Product = {
-  id: number;
-  slug: string;
-  brand: string;
-  model: string;
-  name: string;
-  spec_text: string;
-  spec_html: string;
-  spec_links: { text: string; href: string }[];
-  image: string | null;
-  initial: string;
-  source_page: number;
-  source_position: number;
-};
-
 export const site = siteJson;
 export const pages = pagesJson;
 export const articles = articlesJson as Article[];
 export const brands = brandsJson as Brand[];
-export const products = productsJson as Product[];
 
 export const upsArticles = articles
   .filter((a) => a.section === 'ups')
@@ -65,9 +44,6 @@ export const upsCategories = [
 export function articlesIn(category: string) {
   return upsArticles.filter((a) => a.category === category);
 }
-
-export const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-export const PAGE_SIZE = 30;
 
 export type NavItem = { label: string; href?: string; children?: NavItem[] };
 
@@ -92,8 +68,8 @@ export const nav: NavItem[] = [
       {
         label: '日本進口PARTS',
         children: [
+          { label: '產品型錄', href: '/products/parts' },
           { label: '日本廠牌', href: '/products/japan-brands' },
-          { label: '已銷售牌產品規格&照片', href: '/products/parts' },
         ],
       },
     ],
@@ -102,5 +78,6 @@ export const nav: NavItem[] = [
     label: 'UPS售後服務與維修保養',
     children: serviceArticles.map((a) => ({ label: a.title, href: `/service/${a.slug}` })),
   },
+  { label: '產品型錄', href: '/products/parts' },
   { label: '聯絡我們', href: '/contact' },
 ];

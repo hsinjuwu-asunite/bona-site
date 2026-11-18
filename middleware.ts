@@ -37,12 +37,8 @@ export function middleware(req: NextRequest) {
       return go(cls === '10' ? '/service/ups-inspection' : '/service/ups-maintenance');
     }
     case '/products_sale.php': {
-      const q = new URLSearchParams();
       const l = searchParams.get('srh_txt');
-      const p = searchParams.get('nowpage');
-      if (l) q.set('letter', l);
-      if (p && p !== '1') q.set('page', p);
-      return go('/products/parts' + (q.toString() ? '?' + q : ''));
+      return go('/products/parts' + (l ? `?letter=${encodeURIComponent(l)}` : ''));
     }
   }
   return NextResponse.next();
