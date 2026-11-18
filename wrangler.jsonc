@@ -10,6 +10,9 @@
   },
   "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "bona-site" }],
   "observability": { "enabled": true },
+  // 開啟 bona-site.<帳號>.workers.dev 測試網址，和每個分支的預覽網址
+  "workers_dev": true,
+  "preview_urls": true,
   "vars": {
     // 聯絡表單收件信箱，多個用逗號分隔，例如 "sales@bonatek.com.tw,boss@bonatek.com.tw"
     "CONTACT_TO": "",
