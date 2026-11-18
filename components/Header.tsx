@@ -44,7 +44,10 @@ function MenuItem({ item, small, path, onNavigate }: { item: NavItem; small: boo
     timer.current = setTimeout(() => setOpen(false), 150);
   };
 
-  const link = item.href ? (
+  // 帶查詢參數的連結（例如型錄分類）用一般連結整頁載入，確保篩選套用
+  const link = item.href?.includes('?') ? (
+    <a href={item.href} onClick={onNavigate}>{item.label}</a>
+  ) : item.href ? (
     <Link href={item.href} className={isActive(item, path) ? 'active' : undefined} onClick={onNavigate}>
       {item.label}
     </Link>

@@ -1,3 +1,4 @@
+import { groups as partsGroups } from '@/lib/catalog';
 import siteJson from '@/data/site.json';
 import pagesJson from '@/data/pages.json';
 import articlesJson from '@/data/articles.json';
@@ -51,33 +52,31 @@ export const nav: NavItem[] = [
   { label: 'HOME', href: '/' },
   { label: '公司簡介', href: '/about' },
   {
-    label: '產品介紹',
-    href: '/products',
+    label: 'UPS不斷電系統',
+    href: '/products/ups/what-is-ups',
     children: [
+      ...upsCategories.map((c) =>
+        c.key === 'ups-sales'
+          ? { label: c.label, href: '/products/ups/ups-sales-record' }
+          : {
+              label: c.label,
+              children: articlesIn(c.key).map((a) => ({ label: a.title, href: `/products/ups/${a.slug}` })),
+            },
+      ),
       {
-        label: 'UPS不斷電系統',
-        children: upsCategories.map((c) =>
-          c.key === 'ups-sales'
-            ? { label: c.label, href: '/products/ups/ups-sales-record' }
-            : {
-                label: c.label,
-                children: articlesIn(c.key).map((a) => ({ label: a.title, href: `/products/ups/${a.slug}` })),
-              },
-        ),
-      },
-      {
-        label: '日本進口PARTS',
-        children: [
-          { label: '產品型錄', href: '/products/parts' },
-          { label: '日本廠牌', href: '/products/japan-brands' },
-        ],
+        label: '售後服務與維修保養',
+        children: serviceArticles.map((a) => ({ label: a.title, href: `/service/${a.slug}` })),
       },
     ],
   },
   {
-    label: 'UPS售後服務與維修保養',
-    children: serviceArticles.map((a) => ({ label: a.title, href: `/service/${a.slug}` })),
+    label: '日本進口原廠Parts',
+    href: '/products/parts',
+    children: [
+      { label: '全部商品', href: '/products/parts' },
+      ...partsGroups().map((g) => ({ label: g.group, href: `/products/parts?g=${encodeURIComponent(g.group)}` })),
+      { label: '日本廠牌', href: '/products/japan-brands' },
+    ],
   },
-  { label: '產品型錄', href: '/products/parts' },
   { label: '聯絡我們', href: '/contact' },
 ];
