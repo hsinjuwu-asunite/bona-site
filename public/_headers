@@ -1,0 +1,11 @@
+/_next/static/*
+  Cache-Control: public,max-age=31536000,immutable
+
+/upload/*
+  Cache-Control: public,max-age=2592000
+
+/userfiles/*
+  Cache-Control: public,max-age=2592000
+
+/images/*
+  Cache-Control: public,max-age=2592000

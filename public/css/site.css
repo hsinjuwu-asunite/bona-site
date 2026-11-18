@@ -1,0 +1,10 @@
+/* Overrides for the new site (loaded after the original stylesheets) */
+
+/* from the inline <style> on the old products_content.php / ups.php pages */
+.main-content img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* the old PHP output had whitespace between the inline-block letters */
+.name-filter li { margin: 0 2px; }

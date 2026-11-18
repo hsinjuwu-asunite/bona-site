@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "bonatek-site",
+  "compatibility_date": "2025-09-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "bonatek-site" }],
+  "observability": { "enabled": true },
+  "vars": {
+    // 聯絡表單收件信箱，多個用逗號分隔，例如 "sales@bonatek.com.tw,boss@bonatek.com.tw"
+    "CONTACT_TO": "",
+    // 寄件人，需為 Resend 已驗證的網域
+    "CONTACT_FROM": "寶楠科技官網 <noreply@bonatek.com.tw>"
+  }
+  // RESEND_API_KEY 是機密，不要寫在這裡：用 `npx wrangler secret put RESEND_API_KEY` 或在後台 Settings → Variables and Secrets 設定
+}

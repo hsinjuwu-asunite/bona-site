@@ -1,0 +1,143 @@
+[
+  {
+    "path": "/upload/info/20200315175754.pdf",
+    "size_bytes": 243559,
+    "used_in": [
+      "product:koganei-pbdats-16x50x30-m-1-1379w"
+    ]
+  },
+  {
+    "path": "/upload/info/6pm5k7bz20180713080412.pdf",
+    "size_bytes": 821973,
+    "used_in": [
+      "article:twx-three-phase"
+    ]
+  },
+  {
+    "path": "/upload/info/BK-BEUA001_SCpureprocess.pdf",
+    "size_bytes": 1572301,
+    "used_in": [
+      "product:koganei-f-sav125-c-q1-200w"
+    ]
+  },
+  {
+    "path": "/upload/info/E-301-07.pdf",
+    "size_bytes": 10021253,
+    "used_in": [
+      "product:kitz-kitz-ea200-tfe"
+    ]
+  },
+  {
+    "path": "/upload/info/FS-N11N_Datasheet.pdf",
+    "size_bytes": 942461,
+    "used_in": [
+      "product:keyence-fs-n11n"
+    ]
+  },
+  {
+    "path": "/upload/info/FU-35FZ_Datasheet.pdf",
+    "size_bytes": 1563483,
+    "used_in": [
+      "product:keyence-fu-35fz"
+    ]
+  },
+  {
+    "path": "/upload/info/FU-38L_Datasheet.pdf",
+    "size_bytes": 1570631,
+    "used_in": [
+      "product:keyence-fu-38l"
+    ]
+  },
+  {
+    "path": "/upload/info/LV-H62_Datasheet.pdf",
+    "size_bytes": 2400046,
+    "used_in": [
+      "product:keyence-lv-h62"
+    ]
+  },
+  {
+    "path": "/upload/info/LV-S62_Datasheet.pdf",
+    "size_bytes": 1676979,
+    "used_in": [
+      "product:keyence-lv-s62"
+    ]
+  },
+  {
+    "path": "/upload/info/MS2-H100_Datasheet.pdf",
+    "size_bytes": 1803020,
+    "used_in": [
+      "product:keyence-ms2-h100"
+    ]
+  },
+  {
+    "path": "/upload/info/MS2-H150_Datasheet.pdf",
+    "size_bytes": 1782418,
+    "used_in": [
+      "product:keyence-ms2-h150"
+    ]
+  },
+  {
+    "path": "/upload/info/bda6X10.pdf",
+    "size_bytes": 992314,
+    "used_in": [
+      "product:koganei-koganei-cs-bda6x10-01"
+    ]
+  },
+  {
+    "path": "/upload/info/jlxzw3mi20180713080947.pdf",
+    "size_bytes": 188383,
+    "used_in": [
+      "article:ups-capacity-calculation"
+    ]
+  },
+  {
+    "path": "/upload/info/krmc1qhi20180713074540.pdf",
+    "size_bytes": 423276,
+    "used_in": [
+      "article:twu-single-phase"
+    ]
+  },
+  {
+    "path": "/upload/info/lwc2umiv20180713085846.pdf",
+    "size_bytes": 218925,
+    "used_in": [
+      "brands"
+    ]
+  },
+  {
+    "path": "/upload/spec/KOGANEI_扭轉汽缸_RHDA.pdf",
+    "size_bytes": 2761005,
+    "used_in": [
+      "product:koganei-rhda40x30-90-er-ha-84w-zg530b2"
+    ]
+  },
+  {
+    "path": "/upload/spec/MINEBEA_AC風扇_3115PS-12T-B30-A00.pdf",
+    "size_bytes": 629956,
+    "used_in": [
+      "product:minebea-3115ps-12t-b30-a00"
+    ]
+  },
+  {
+    "path": "/upload/spec/MITUTOYO_LGF_線性量規.pdf",
+    "size_bytes": 391309,
+    "used_in": [
+      "product:mitutoyo-542-162-lgf-125l-b",
+      "product:mitutoyo-542-164-lgf-110zl-b"
+    ]
+  },
+  {
+    "path": "/upload/spec/MITUTOYO_數位卡尺_500-196-30.pdf",
+    "size_bytes": 462849,
+    "used_in": [
+      "product:mitutoyo-500-196-30"
+    ]
+  },
+  {
+    "path": "/upload/spec/MOTOYAMA_潔淨控制閥_2LES4C-FV.pdf",
+    "size_bytes": 198481,
+    "used_in": [
+      "product:motoyama-2les4c-fv"
+    ]
+  }
+]

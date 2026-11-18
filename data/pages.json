@@ -1,0 +1,64 @@
+{
+  "home": {
+    "banner": "/upload/ad/cg9xaelh20180531071156.jpg",
+    "intro_html": "<p style=\"text-align: center\">公司名稱：寶楠科技股份有限公司<br/>\n(Bona Fide Technology Co., Ltd.)<br/>\n成立日期：西元1997年2月<br/>\n公司地址：10660 台北市 大安區 新生南路3段 6號 2樓</p>\n<p style=\"text-align: center\">自2004年7月在台中設立辦事處<br/>\n(台中科學園區之售後服務據點)<br/>\n地址：台中市 沙鹿區 正德路 201巷 49號<br/>\n自2007年5月 TFT / LCD製程設備用之零組件銷售</p>"
+  },
+  "about": {
+    "title": "公司簡介",
+    "hero": "/images/about.jpg",
+    "html": "<div><span style=\"font-size:18px;\">一、<u>【公司簡介】</u></span></div>\n<div>1. 公司名稱：寶楠科技股份有限公司</div>\n<div>                    (Bona Fide Technology Co., Ltd.)</div>\n<div>2. 成立日期：西元1997年2月</div>\n<div>3. 公司地址：106 台北市大安區新生南路3段6號2樓</div>\n<div>4. 2004年7月在台中設立辦事處 ( 台中科學園區之售後服務據點 ) </div>\n<div>    地址：台中市沙鹿區自立路198巷68號</div>\n<div>5. 2007年5月製程設備用之零組件銷售</div>\n<div> </div>\n<div><span style=\"font-size:18px;\">二、<u>【販賣商品】</u></span></div>\n<div>(1) 工業級大型不斷電系統 UPS ( Uninterruptible Power Supplies )</div>\n<div>(2) 日本機台設備用之零組件(Parts) </div>\n<div> </div>\n<div><span style=\"font-size:18px;\">三、<u>【客戶實績】</u></span></div>\n<div>(1)TFT LCD面板廠 ：</div>\n<div>★AUO ptronics Corp (友達光電股份有限公司)：</div>\n<div> 【新竹】L3C廠、林口L3D廠</div>\n<div> 【桃園龍潭】L4A、L5A、L5B、C5A、L5D、L6B廠</div>\n<div> 【台中】L5C、C5C、L6A、C6A、L7A、L7B、L8A、L8B 廠。</div>\n<div>★Innolux Corporation (群創光電股份有限公司)</div>\n<div>   FAB 1、 2、3、4、5、6、7、8 廠</div>\n<div>★Chung Hwa Picture Tubes Ltd.(中華映管股份有限公司)：</div>\n<div>   桃園龍潭L1A、L1B、L2廠</div>\n<div>★Giant Plus Technology Co., Ltd (凌巨科技股份有限公司)</div>\n<div>   桃園八德廠</div>\n<div>★E Ink Holdings Inc. (元太科技工業股份有限公司) </div>\n<div>★TAI-YOUNG HIGH TECH CO.,LTD (太洋新技股份有限公司)</div>\n<div>   (日本三菱化學集團)</div>\n<div>★SUNPLUS (凌陽科技股份有限公司)</div>\n<div>★HannStar Display Corporation ( 瀚宇彩晶股份有限公司 )</div>\n<div> </div>\n<div>(2)日系企業：</div>\n<div>★Dainippon Screen Mfg. Co., Ltd. </div>\n<div>   (迪恩仕光電科技股份有限公司)、</div>\n<div>★日本Tokyo Electron Limited、</div>\n<div>★CANON Semiconductor Equipment Taiwan, Inc</div>\n<div>   (佳能半導體設備股份有限公司)</div>\n<div>★Taikisha (Taiwan) Ltd. (華氣社股份有限公司)</div>\n<div>★KOYO Thermo System Asia Co., Ltd</div>\n<div>   (光洋林博股份有限公司)、</div>\n<div>★TOYO Thermotech Eng. Co., Ltd </div>\n<div>   (東洋空調工程股份有限公司)、</div>\n<div>★YAC株式會社(dry etch)、 </div>\n<div> </div>\n<div><span style=\"font-size:18px;\">四、<u>【未來與展望】</u></span></div>\n<div>本公司在製造商與客戶之間扮演了促進兩方合作的角色。</div>\n<div>對製造商提供產品的有效行銷管道；對客戶提供更多優良產品的機會及快速對應的售前&amp;售後服務。 </div>\n<div>台灣近年來在FPD產業,尤其是 TFT-LCD都有長足的進步，隨著產業快速發展，本公司在FPD業界的銷售實績也隨之成長。</div>\n<div>本公司以提供一個暢通的銷售管道與快速對應的售後服務為目標，抱持著對產品的責任心，來贏得製造商與客戶端兩方信賴與認同。將建立高效率的販賣通路做為本公司的目標。</div>\n<div>隨著產業的蓬勃發展，加上長年以來寶楠科技在業界上人脈的拓展及經驗的累積，相信未來能為更多製造商及客戶提供更完善的服務，與業界、客戶共創嶄新的未來。</div>\n<div> </div>"
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "hero": "/images/contact.jpg",
+    "map_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.257006030418!2d121.53232231539184!3d25.025350744791307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a987a98ae7d3%3A0x6a369a465a86c8ab!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5paw55Sf5Y2X6Lev5LiJ5q61NuiZnw!5e0!3m2!1szh-TW!2stw!4v1523430961024",
+    "info_html": "<h4>寶楠科技股份有限公司</h4>\n<p>地址：106台北市大安區新生南三段6號2樓<br/>\n\t\t\t\t\t\t電話：886-2-2362-9517<br/>\n\t\t\t\t\t\t傳真：886-2-2368-3865</p>",
+    "form": {
+      "old_action": "contact_save.php",
+      "fields": [
+        {
+          "name": "Name",
+          "type": "text",
+          "placeholder": "姓名",
+          "required": true
+        },
+        {
+          "name": "Email",
+          "type": "email",
+          "placeholder": "e-mail",
+          "required": true
+        },
+        {
+          "name": "company",
+          "type": "text",
+          "placeholder": "公司名稱",
+          "required": true
+        },
+        {
+          "name": "tel",
+          "type": "text",
+          "placeholder": "公司電話",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "type": "text",
+          "placeholder": "單位名稱",
+          "required": true
+        },
+        {
+          "name": "Subject",
+          "type": "text",
+          "placeholder": "主旨",
+          "required": true
+        },
+        {
+          "name": "Message",
+          "type": "textarea",
+          "placeholder": "內文",
+          "required": true
+        }
+      ]
+    }
+  }
+}
