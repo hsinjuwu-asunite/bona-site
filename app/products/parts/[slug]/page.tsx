@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import PageShell from '@/components/PageShell';
 import ProductThumb from '@/components/ProductThumb';
 import AddToQuote from '@/components/AddToQuote';
-import { bySlug, catalog, formatPrice, related } from '@/lib/catalog';
+import { absUrl, bySlug, catalog, formatPrice, related, withTax } from '@/lib/catalog';
 import { site } from '@/lib/data';
 import { SITE_URL } from '@/lib/seo';
 
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${i.brand} ${i.model} ${i.category}`,
     description: desc,
     alternates: { canonical: `/products/parts/${i.slug}` },
-    openGraph: i.image ? { images: [i.image] } : undefined,
+    openGraph: i.image ? { images: [absUrl(SITE_URL, i.image)] } : undefined,
   };
 }
 
@@ -45,7 +45,8 @@ export default async function PartDetail({ params }: { params: Promise<{ slug: s
     mpn: i.model,
     brand: { '@type': 'Brand', name: i.brand },
     category: `${i.group} > ${i.category}`,
-    ...(i.image ? { image: SITE_URL + i.image } : {}),
+    ...(i.image ? { image: absUrl(SITE_URL, i.image) } : {}),
+    ...(i.description ? { description: i.description } : {}),
     ...(i.price != null
       ? {
           offers: {
@@ -95,7 +96,7 @@ export default async function PartDetail({ params }: { params: Promise<{ slug: s
               {i.price != null ? (
                 <>
                   <span className="pdetail__price-num">{formatPrice(i.price)}</span>
-                  <span className="pdetail__price-unit">未稅・參考價</span>
+                  <span className="pdetail__price-unit">未稅・含稅 {formatPrice(withTax(i.price))}</span>
                 </>
               ) : (
                 <span className="pdetail__price-num pdetail__price-num--ask">價格請洽詢</span>
@@ -125,10 +126,12 @@ export default async function PartDetail({ params }: { params: Promise<{ slug: s
               </tbody>
             </table>
 
+            {i.description && <p className="pdetail__desc">{i.description}</p>}
+
             <AddToQuote item={i} />
 
             <ul className="pdetail__notes">
-              <li>價格為最近一次成交的未稅參考價，日本進口品會隨匯率與原廠價格調整，實際以報價單為準。</li>
+              <li>價格為未稅參考價，日本進口品會隨匯率與原廠價格調整，實際以報價單為準。付款方式為銀行匯款。</li>
               <li>交期為過去實績參考，下單前會再向原廠確認。</li>
               <li>需要急件、替代型號或大量採購，歡迎來電 {site.phone}。</li>
             </ul>

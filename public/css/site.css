@@ -151,3 +151,5 @@ a.tag:hover { color: var(--bona-blue); text-decoration: none; }
 }
 .pdetail__media { align-self: start; position: sticky; top: 20px; }
 @media (max-width: 1000px) { .pdetail__media { position: static; } }
+
+.pdetail__desc{margin:16px 0;line-height:1.7;color:#444;white-space:pre-line}
