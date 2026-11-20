@@ -3,31 +3,22 @@ import type { ReactNode } from 'react';
 
 export type Crumb = { label: string; href?: string };
 
-export default function PageShell({ hero, crumbs, children }: { hero: string; crumbs: Crumb[]; children: ReactNode }) {
+/**
+ * 內頁外框：麵包屑列＋內容。
+ * 舊站每頁的橫幅圖（hero）上燒有英文字，新版不再顯示；參數保留以免各頁都要改。
+ */
+export default function PageShell({ crumbs, children }: { hero?: string; crumbs: Crumb[]; children: ReactNode }) {
   return (
     <>
-      <div className="hero-container">
-        <div className="hero-slick">
-          <div className="slick-item">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={hero} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="services-breadcrumb">
-        <div className="container">
-          <div className="inner_breadcrumb">
-            <ul className="short">
-              {crumbs.map((c, i) => (
-                <li key={i}>
-                  {c.href ? <Link href={c.href}>{c.label}</Link> : c.label}
-                  {i < crumbs.length - 1 && <span>|</span>}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <nav className="crumbs" aria-label="目前位置">
+        <ol className="wrap">
+          {crumbs.map((c, i) => (
+            <li key={i} aria-current={i === crumbs.length - 1 ? 'page' : undefined}>
+              {c.href ? <Link href={c.href}>{c.label}</Link> : c.label}
+            </li>
+          ))}
+        </ol>
+      </nav>
       <div className="site-content">{children}</div>
     </>
   );

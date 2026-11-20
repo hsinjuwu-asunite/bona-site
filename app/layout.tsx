@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Header from '@/components/Header';
 import BackToTop from '@/components/BackToTop';
+import Footer from '@/components/Footer';
 import { nav, site } from '@/lib/data';
 import { DEFAULT_DESCRIPTION, SITE_URL } from '@/lib/seo';
 
@@ -22,13 +23,18 @@ export const metadata: Metadata = {
 
 export const viewport = { width: 'device-width', initialScale: 1 };
 
-// Original site stylesheets, kept as-is so the new site looks identical.
-const legacyCss = ['bootstrap', 'font-awesome', 'flexnav', 'style', 'site'];
+// 舊站樣式（內容頁仍沿用其版面），之後載入 site.css 與新版外觀 theme.css 覆寫
+const legacyCss = ['bootstrap', 'font-awesome', 'style', 'site', 'theme'];
+const FONTS =
+  'https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-Hant-TW">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="stylesheet" href={FONTS} />
         {legacyCss.map((c) => (
           <link key={c} rel="stylesheet" href={`/css/${c}.css`} precedence="default" />
         ))}
@@ -58,23 +64,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }),
           }}
         />
-        <div id="container" className="fixed-header">
-          <Header nav={nav} address={site.address} phone={site.phone} hours={site.hours} />
-          {children}
-          <div className="footer">
-            <div className="container clearfix">
-              <div className="footer-info">
-                <h2 className="footer-info__title">{site.name}</h2>
-                <p className="footer-info__text">
-                  公司電話：{site.phone}
-                  <br />
-                  公司地址：{site.address}
-                  <br />
-                  {site.copyright}
-                </p>
-              </div>
-            </div>
-          </div>
+        <div id="container">
+          <Header nav={nav} phone={site.phone} />
+          <main>{children}</main>
+          <Footer />
           <BackToTop />
         </div>
       </body>
