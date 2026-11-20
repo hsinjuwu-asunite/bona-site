@@ -18,6 +18,13 @@
     "CONTACT_TO": "",
     // 寄件人，需為 Resend 已驗證的網域
     "CONTACT_FROM": "寶楠科技官網 <noreply@bonatek.com.tw>"
+  },
+  // 分支預覽（Worker Previews）用的設定；預覽環境不寄信（CONTACT_TO 留空，詢價內容只記在 Logs）
+  "previews": {
+    "vars": {
+      "CONTACT_TO": "",
+      "CONTACT_FROM": "寶楠科技官網 <noreply@bonatek.com.tw>"
+    }
   }
   // RESEND_API_KEY 是機密，不要寫在這裡：用 `npx wrangler secret put RESEND_API_KEY` 或在後台 Settings → Variables and Secrets 設定
 }
