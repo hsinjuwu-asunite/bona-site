@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="sf__co">
           <p className="sf__name">{site.name}</p>
           <p className="sf__en">{site.name_en}</p>
-          <p className="sf__since">1997 年成立。代理工業級大型不斷電系統，並為台灣的面板、半導體廠代購日本設備零組件。</p>
+          <p className="sf__since">1997 年成立。代理工業級大型不斷電系統，並為台灣的面板、半導體廠供應日本設備零組件。</p>
         </div>
         <dl className="sf__contact">
           <dt>台北總公司</dt>

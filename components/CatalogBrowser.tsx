@@ -209,7 +209,7 @@ export default function CatalogBrowser({ items, groups, brands }: { items: ListI
               </div>
             </div>
           ))}
-          {ready && shown.length === 0 && <p className="catalog-empty">沒有符合條件的商品。找不到需要的型號？歡迎直接詢價，我們可代為向日本原廠詢價。</p>}
+          {ready && shown.length === 0 && <p className="catalog-empty">沒有符合條件的商品。找不到需要的型號？歡迎直接詢價，同樣可由我們供應。</p>}
         </div>
 
         {totalPages > 1 && (

@@ -43,6 +43,7 @@ for i in cat:
     if not i.get('datasheets') and p.get('spec_url'):
         i['datasheets'] = [{'text': '規格書／原廠資料', 'href': p['spec_url']}]; n_ds += 1
     d = re.sub(r'\n?規格書／原廠資料：.*$', '', p.get('description') or '', flags=re.S).strip()
+    d = d.replace('寶楠科技代為進口採購', '由寶楠科技供應')  # 網站用詞：供應，不用「代購」
     i['description'] = d
     n_desc += bool(d)
 

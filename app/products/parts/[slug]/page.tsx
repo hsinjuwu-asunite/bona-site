@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     `${i.brand} ${i.model}（${i.category}）`,
     i.price != null ? `參考價 ${formatPrice(i.price)} 未稅` : '歡迎詢價',
     i.lead_time ? `參考交期 ${i.lead_time}` : '',
-    '寶楠科技提供日本機台設備零組件代購與報價。',
+    '寶楠科技提供日本機台設備零組件供應與報價。',
   ].filter(Boolean).join('，');
   return {
     title: `${i.brand} ${i.model} ${i.category}`,
