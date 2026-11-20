@@ -12,7 +12,7 @@ export type CatalogItem = {
   brand: string;
   model: string;
   name: string;
-  price: number | null; // 最近成交單價（未稅 NT$）；超過 3 年或無資料為 null → 顯示「請詢價」
+  price: number | null; // 網站售價（未稅 NT$）＝最近成交價 ×1.08；超過 3 年或無資料為 null → 顯示「請詢價」
   price_date: string | null;
   lead_time: string | null; // 參考交期
   spec: string;
@@ -20,6 +20,7 @@ export type CatalogItem = {
   popularity: number; // 成交次數，只用來排序，不顯示
   image: string | null;
   datasheets: { text: string; href: string }[];
+  description: string; // 商品說明（Product Master 產生）
 };
 
 export const catalog = catalogJson as CatalogItem[];
@@ -63,6 +64,12 @@ export function related(item: CatalogItem, n = 4) {
 }
 
 export const formatPrice = (n: number) => 'NT$ ' + n.toLocaleString('en-US');
+
+/** 含 5% 營業稅 */
+export const withTax = (n: number) => Math.round(n * 1.05);
+
+/** 圖片網址：站內路徑補上網域，外部網址原樣回傳 */
+export const absUrl = (base: string, u: string) => (/^https?:\/\//.test(u) ? u : base + u);
 
 /** 給列表頁用的精簡欄位（送到瀏覽器） */
 export type ListItem = Pick<
