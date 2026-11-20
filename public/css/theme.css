@@ -216,76 +216,25 @@ textarea.form-control { height: auto; }
 .hm-search__eg { margin: 12px 0 0; font-size: 13px; color: var(--steel); }
 .hm-search__eg a { display: inline-block; white-space: nowrap; font-family: var(--font-num); font-size: 15px; font-weight: 500; margin-left: 12px; }
 
-/* 兩條產品線：左窄右寬，不做成一樣的卡片 */
-.hm-lines { padding-top: 64px; padding-bottom: 64px; }
-.hm-lines__grid { display: grid; grid-template-columns: 1fr 1.35fr; border-top: 3px solid var(--ink); }
-.hm-line { padding: 28px 40px 8px 0; }
-.hm-line + .hm-line { padding: 28px 0 8px 40px; border-left: 1px solid var(--line); }
-.hm-line__title { font-size: 20px; font-weight: 700; margin: 0 0 10px; }
-.hm-line__title a { color: var(--ink); }
-.hm-line__title a:hover { color: var(--blue); }
-.hm-line p { color: #4a4e55; max-width: 34em; }
-.hm-line__links { list-style: none; padding: 0; margin: 18px 0 0; }
-.hm-line__links li { border-top: 1px solid var(--line); }
-.hm-line__links a { display: block; padding: 10px 0; color: var(--ink); }
-.hm-line__links a:hover { color: var(--blue); text-decoration: none; }
-.hm-line__count { font-size: 13px; color: var(--steel) !important; margin-top: 14px; }
-.hm-index { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
-.hm-index li { border-top: 1px solid var(--line); }
-.hm-index a { display: flex; justify-content: space-between; padding: 10px 0; color: var(--ink); }
-.hm-index a:hover { color: var(--blue); text-decoration: none; }
-.hm-index__n { font-family: var(--font-num); font-size: 16px; color: var(--steel); }
 
-/* 常詢價品項：做成表列，工程師比價格與交期最方便 */
-.hm-pop { background: var(--mist); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 56px 0; }
-.hm-pop__list { list-style: none; padding: 0; margin: 0; background: #fff; border: 1px solid var(--line); }
-.hm-pop__row { display: grid; grid-template-columns: 84px minmax(0, 1fr) 150px 150px; align-items: center; gap: 20px; padding: 10px 20px 10px 10px; }
-.hm-pop__row + .hm-pop__row { border-top: 1px solid var(--line); }
-.hm-pop__row:hover { background: #fafbfd; }
-.hm-pop__img { display: block; width: 84px; height: 64px; }
-.hm-pop__img .pthumb { width: 84px; height: 64px; }
-.hm-pop__img .pthumb--photo { padding: 4px; }
-.hm-pop__img .pthumb--ph { box-shadow: inset 0 0 0 1px var(--line); padding: 4px; }
-.hm-pop__img .pthumb__model, .hm-pop__img .pthumb__cat { display: none; }
-.hm-pop__img .pthumb__brand { font-size: 10px; }
-.hm-pop__id { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; }
-.hm-pop__brand { font-size: 13px; color: var(--steel); font-weight: 500; letter-spacing: .04em; min-width: 90px; }
-.hm-pop__model { font-family: var(--font-num); font-weight: 600; font-size: 21px; color: var(--ink); }
-.hm-pop__model:hover { color: var(--blue); }
-.hm-pop__cat { flex-basis: 100%; font-size: 13px; color: var(--steel); }
-.hm-pop__lead { font-size: 14px; }
-.hm-pop__k { display: block; font-size: 12px; color: var(--steel); font-family: var(--font); font-weight: 400; }
-.hm-pop__price { text-align: right; font-family: var(--font-num); font-weight: 600; font-size: 20px; color: var(--price); line-height: 1.2; }
-.hm-pop__price .hm-pop__k { display: block; }
-.hm-pop__ask { font-family: var(--font); font-size: 15px; font-weight: 500; color: var(--ink); }
 
-/* 下單流程：真的是先後步驟，才用編號 */
-.hm-flow { padding-top: 64px; padding-bottom: 56px; }
-.hm-flow__steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); counter-reset: none; }
-.hm-flow__steps li { padding: 0 22px 0 0; position: relative; }
-.hm-flow__steps li + li { padding-left: 22px; border-left: 1px solid var(--line); }
-.hm-flow__n { display: block; font-family: var(--font-num); font-weight: 600; font-size: 34px; line-height: 1; color: var(--blue); margin-bottom: 10px; }
-.hm-flow__steps h3 { font-size: 17px; font-weight: 700; margin: 0 0 6px; }
-.hm-flow__steps p { font-size: 14px; color: #4a4e55; margin: 0; }
-.hm-flow__note { margin: 32px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--steel); }
-.hm-flow__note a { margin-left: 12px; font-weight: 500; }
 
-/* 客戶實績 */
-.hm-refs { border-top: 1px solid var(--line); padding: 56px 0; }
-.hm-refs__grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; }
-.hm-refs__intro { color: #4a4e55; max-width: 26em; }
-.hm-refs__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.hm-refs__cols h3 { font-size: 14px; font-weight: 500; color: var(--steel); margin: 0 0 10px; }
-.hm-refs__cols ul { list-style: none; padding: 0; margin: 0; }
-.hm-refs__cols li { padding: 9px 0; border-top: 1px solid var(--line); font-size: 16px; font-weight: 500; display: flex; justify-content: space-between; gap: 12px; }
-.hm-refs__cols li span { font-size: 13px; font-weight: 400; color: var(--steel); text-align: right; }
 
-/* 品牌 */
-.hm-brands { padding-top: 8px; padding-bottom: 64px; }
-.hm-brands__list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.hm-brands__list a { display: inline-flex; align-items: baseline; gap: 8px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); font-family: var(--font-num); font-weight: 600; font-size: 16px; letter-spacing: .02em; }
-.hm-brands__list a:hover { border-color: var(--blue); color: var(--blue); text-decoration: none; }
-.hm-brands__list span { font-weight: 500; font-size: 13px; color: var(--steel); }
+
+/* 客戶實績、銷售品牌：logo 牆 */
+.hm-logos { padding: 64px 0 56px; }
+.hm-logos--brands { background: var(--mist); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hm-logos__grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.hm-logos__grid--cust { grid-template-columns: repeat(5, 1fr); }
+.hm-logos:not(.hm-logos--brands) .hm-logos__grid li { background: var(--mist); border-color: transparent; }
+.hm-logos__grid li { background: #fff; border: 1px solid var(--line); border-radius: 3px; height: 96px; display: flex; }
+.hm-logos__grid li > a, .hm-logos__grid li > img { flex: 1; }
+.hm-logos__grid a { display: flex; align-items: center; justify-content: center; padding: 18px 22px; }
+.hm-logos__grid img { display: block; max-width: 100%; max-height: 44px; width: auto; height: auto; margin: auto; object-fit: contain; }
+.hm-logos__grid--cust img { max-height: 48px; padding: 0 22px; }
+.hm-logos__grid a:hover { border-radius: 3px; box-shadow: 0 0 0 1px var(--blue); }
+.hm-logos__more { margin: 16px 0 0; font-size: 14px; color: var(--steel); }
+.hm-logos__more a { margin-left: 4px; }
 
 /* 詢價 CTA */
 .hm-ask { background: var(--blue); color: #e3e9ff; }
@@ -297,39 +246,27 @@ textarea.form-control { height: auto; }
 .hm-ask__tel:hover { color: #fff; }
 
 @media (max-width: 1000px) {
+  .hm-logos__grid, .hm-logos__grid--cust { grid-template-columns: repeat(4, 1fr); }
   .hm-hero__grid { grid-template-columns: 1fr; min-height: 0; }
   .hm-hero__text { padding: 40px 0 32px; }
   .hm-hero__fig { margin: 0 -24px; height: 220px; }
   .hm-hero__title { font-size: 32px; }
-  .hm-lines__grid { grid-template-columns: 1fr; }
-  .hm-line, .hm-line + .hm-line { padding: 24px 0 8px; border-left: 0; }
-  .hm-line + .hm-line { border-top: 1px solid var(--line); margin-top: 16px; }
-  .hm-flow__steps { grid-template-columns: 1fr; gap: 0; }
-  .hm-flow__steps li, .hm-flow__steps li + li { padding: 16px 0 16px 56px; border-left: 0; border-top: 1px solid var(--line); }
-  .hm-flow__n { position: absolute; left: 0; top: 16px; font-size: 30px; }
-  .hm-refs__grid { grid-template-columns: 1fr; gap: 8px; }
-  .hm-pop__row { grid-template-columns: 72px minmax(0, 1fr) auto; }
-  .hm-pop__img, .hm-pop__img .pthumb { width: 72px; height: 56px; }
-  .hm-pop__lead { display: none; }
   .hm-ask__in { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 600px) {
+  .hm-logos { padding: 44px 0; }
+  .hm-logos__grid, .hm-logos__grid--cust { grid-template-columns: repeat(3, 1fr); }
+  .hm-logos__grid { gap: 8px; }
+  .hm-logos__grid li { height: 72px; }
+  .hm-logos__grid a { padding: 12px; }
+  .hm-logos__grid img { max-height: 30px; }
+  .hm-logos__grid--cust img { padding: 0 10px; }
   .hm-hero__title { font-size: 26px; }
   .hm-hero__fig { margin: 0 -16px; height: 180px; }
   .hm-search__input { font-size: 19px; height: 50px; padding: 0 12px; }
   .hm-search__btn { padding: 0 14px; font-size: 15px; }
   .hm-search__eg a { margin-left: 8px; }
   .hm-h2 { font-size: 21px; }
-  .hm-lines, .hm-flow { padding-top: 44px; padding-bottom: 44px; }
-  .hm-pop, .hm-refs { padding: 44px 0; }
-  .hm-index { grid-template-columns: 1fr; }
-  .hm-refs__cols { grid-template-columns: 1fr; gap: 20px; }
-  .hm-pop__row { grid-template-columns: 56px minmax(0, 1fr); gap: 12px; padding: 10px 12px 10px 8px; }
-  .hm-pop__img, .hm-pop__img .pthumb { width: 56px; height: 48px; }
-  .hm-pop__price { grid-column: 2; text-align: left; font-size: 17px; }
-  .hm-pop__price .hm-pop__k { display: inline; margin-left: 6px; }
-  .hm-pop__brand { min-width: 0; }
-  .hm-pop__model { font-size: 18px; }
   .hm-ask__actions { flex-wrap: wrap; gap: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
